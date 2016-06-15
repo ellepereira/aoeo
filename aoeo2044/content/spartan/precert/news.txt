@@ -1,0 +1,3 @@
+PROJECT PENELOPE (codename for fanproject to bring back AoEO online)
+
+Version 2044 of the game was the only build to have easy access to the editor (by configuring a XML file). We did not have a way to playtest scenarios since the servers are down. Through some research I discovered a flag that allowed the game to run even with the servers being offline. Combined with the editor's playtest feature - players are once again allowed to kill some bandits.

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout type="pinned">
+	<gadget name="MPLoginDialog-ScreenContainer" type="gadget" sizefullscreen="" centerhoriz="" background="UserInterface\PreGame\PreGameBackground_df" texturecoords="0 0 1 0.5625" backgroundstretchvertmaintainaspectratio="" z="25">
+		<gadget name="MPLoginDialog-LogoContainer" type="gadget" sizefullscreen="" centerhoriz="" background="UserInterface\LoadingScreens\esrb_df" texturecoords="0 0 1 0.5625" backgroundstretchvertmaintainaspectratio="" z="60" hidden=""/>
+		<gadget name="MPLoginDialog-LoginContainer" centerhoriz="" type="gadget" sizerel1280="128 300 1151 800" z="10">
+			<gadget name="MPLoginDialog-LoginButton" type="stateButton" sizerel1280="370 218 653 293" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="28" textcolor="255 255 255" textcenterhoriz="" texturecoords="0 0 .555 .594" textcentervert="" z="30" uisoundtheme="PregameButton">
+				$$18593$$Play
+				<stateentry background="UserInterface\Core\Button256x48WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-OptionsButton" type="stateButton" sizerel1280="423 300 600 353" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameButton">
+				$$42324$$Options
+				<command>modeEnter("Options")</command>
+				<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-EditorButton" type="stateButton" sizerel1280="423 360 600 413" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameButton">
+				Editor
+				<command>modeEnter("Editor")</command>
+				<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-LoginGFWLButton" type="stateButton" sizerel1280="423 420 600 473" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameButton">
+				<stateentry background="UserInterface\Core\ButtonLiveWdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\ButtonLiveWdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\ButtonLiveWdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-PlayContainer" centerhoriz="" type="gadget" sizerel1280="128 300 1151 800" z="10" hidden="true">
+			<gadget name="MPLoginDialog-PlayButton" type="stateButton" sizerel1280="370 218 653 293" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="28" textcolor="255 255 255" textcenterhoriz="" texturecoords="0 0 .555 .594" textcentervert="" z="30" uisoundtheme="PregameButton">
+				$$18593$$Play
+				<stateentry background="UserInterface\Core\Button256x48WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-OptionsButton2" type="stateButton" sizerel1280="423 300 600 353" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameButton">
+				$$42324$$Options
+				<command>modeEnter("Options")</command>
+				<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-PlayGFWLButton" type="stateButton" sizerel1280="423 360 600 413" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameButton">
+				<stateentry background="UserInterface\Core\ButtonLiveWdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\ButtonLiveWdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\ButtonLiveWdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-StatusContainer" type="gadget" centerhoriz="" sizerel1280="0 350 511 661" background="art/UserInterface/Core/DialogBox_ua" z="20" hidden="" texturecoords="0 0 1 .609">
+			<gadget name="MPLoginDialog-StatusTitle" textcentervert="" textcolor="40 40 40" textfontsize="32" textfont="Pregamelabels" type="formatText" sizerel1280="0 30 511 60" textcenterhoriz="">Slogging On</gadget>
+			<gadget name="MPLoginDialog-StatusProgress" type="gadget" centerhoriz="" sizerel1280="0 60 128 183" background="UserInterface\LoadingScreens\InfiniteLoadingBar\frame0_ua" centerx="0" z="36" hidden=""/>
+			<gadget name="MPLoginDialog-StatusText" textcentervert="" textcolor="40 40 40" textfontsize="18" textfont="Pregamelabels" type="formatText" sizerel1280="0 190 511 220" textcenterhoriz="">Connecting...</gadget>
+			<gadget name="MPLoginDialog-CancelButton" centerhoriz="" tooltiptext="$$37374$$Cancel Login" type="stateButton" sizerel1280="356 225 639 300" bevelbutton="" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="28" textcolor="255 255 255" textcenterhoriz="" texturecoords="0 0 .555 .594" textcentervert="" z="30" uisoundtheme="PregameButton">
+				$$18466$$Cancel
+				<stateentry background="UserInterface\Core\Button256x48WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button256x48WdsDisabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-EmpireContainer" type="gadget" centerhoriz="" sizerel1280="212 80 1068 808" background="art/UserInterface/PreGame/CharacterSelectBackground_ua" texturecoords="0 0 .837 .712" z="30" hidden="">
+			<gadget name="MPLoginDialog-EmpireLabel" type="formatText" sizerel1280="91 15 744 49" textfontsize="28" textfont="MenuHeader Bold" textcenterhoriz="" textcentervert="" textcolor="255 255 255" z="32">$$57361$$Choose your empire</gadget>
+			<gadget name="MPLoginDialog-GreekContainer" type="gadget" sizerel1280="55 71 418 571" z="32" hidden="">
+				<gadget name="MPLoginDialog-GreekLabel" type="formatText" sizerel1280="0 3 363 36" textfontsize="26" textfont="MenuHeader Bold" textcenterhoriz="" z="33" textcolor="40 40 40">$$57363$$GREEK</gadget>
+				<gadget name="MPLoginDialog-GreekShield" type="gadget" sizerel1280="82 40 280 240" background="art/UserInterface/PreGame/GreekShield_ua" texturecoords="0 0 1.0 1.0" z="33"/>
+				<gadget name="MPLoginDialog-GreekCityName" type="formatText" sizerel1280="0 245 363 265" textcolor="40 40 40" textfont="MenuHeader Bold" textfontsize="18" textcenterhoriz="" z="33">CITY NAME HERE</gadget>
+				<gadget name="MPLoginDialog-GreekCityLevel" type="formatText" sizerel1280="0 270 363 290" textcolor="40 40 40" textfont="MenuHeader Bold" textfontsize="16" textcenterhoriz="" z="33">LEVEL 1337</gadget>
+				<gadget name="MPLoginDialog-GreekCityPlayButton" type="stateButton" sizerel1280="0 300 177 353" centerhoriz="" tooltiptext="$$57373$$Rule the Greeks" textcenterhoriz="" z="33" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .695 .844" uisoundtheme="PregameButton">
+					$$18593$$Play
+					<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+				</gadget>
+				<gadget name="MPLoginDialog-GreekCityDescription" type="formatText" sizerel1280="40 370 323 447" textcolor="40 40 40" textfont="PregameLabels" textfontsize="16" z="33">$$57362$$Take control of the lands of Greece and control the wealth of the Greek isles.</gadget>
+				<gadget name="MPLoginDialog-GreekCityDeleteButton" type="stateButton" sizerel1280="0 442 147 485" centerhoriz="" tooltiptext="$$57378$$Delete the Greeks" textcolor="255 255 255" textfont="PregameButtons" textfontsize="14" textcenterhoriz="" textcentervert="" z="33" statebuttonuseinternalstates="" texturecoords="0 0 .578 .688" uisoundtheme="PregameBackButton">
+					$$18574$$Delete
+					<stateentry background="UserInterface\Core\ButtonWds128x24Normal_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Clicked_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Rollover_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Disabled_ua"/>
+				</gadget>
+			</gadget>
+			<gadget name="MPLoginDialog-GreekContainerInactive" type="gadget" sizerel1280="55 71 418 571" z="31" hidden="">
+				<gadget name="MPLoginDialog-GreekLabelInactive" type="formatText" sizerel1280="0 3 363 36" textfontsize="26" textcolor="87 81 67" textfont="MenuHeader Bold" textcenterhoriz="" z="32">$$57363$$GREEK</gadget>
+				<gadget name="MPLoginDialog-GreekShieldInactive" type="gadget" sizerel1280="82 40 280 240" background="art/UserInterface/PreGame/GreekShieldGrey_ua" texturecoords="0 0 .777 .785" z="32"/>
+				<gadget name="MPLoginDialog-GreekCityNameInactive" type="formatText" sizerel1280="0 245 363 280" textcolor="87 81 67" textfont="MenuHeader Bold" textfontsize="18" textcenterhoriz="" z="32">$$57364$$CREATE NEW CITY</gadget>
+				<gadget name="MPLoginDialog-GreekCityCreateButton" type="stateButton" sizerel1280="0 300 177 353" centerhoriz="" tooltiptext="$$57376$$Create new Greek city" textcenterhoriz="" z="32" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .695 .844" uisoundtheme="PregameButton">
+					$$37466$$Create
+					<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+				</gadget>
+				<gadget name="MPLoginDialog-GreekCityDescriptionInactive" type="formatText" sizerel1280="40 370 323 500" textcolor="87 81 67" textfont="PregameLabels" textfontsize="16" z="32">$$57362$$Take control of the lands of Greece and control the wealth of the Greek isles.</gadget>
+			</gadget>
+			<gadget name="MPLoginDialog-GreekActive" type="gadget" sizerel1280="53 71 417 572" background="art/UserInterface/PreGame/GRCharSelectBGHighlight_ua" texturecoords="0 0 .711 .979" z="31" hidden=""/>
+			<gadget name="MPLoginDialog-EgyptianContainer" type="gadget" sizerel1280="435 71 798 571" z="32" hidden="">
+				<gadget name="MPLoginDialog-EgyptianLabel" type="formatText" sizerel1280="0 3 363 36" textfontsize="26" textfont="MenuHeader Bold" textcenterhoriz="" z="32" textcolor="40 40 40">$$57365$$Egyptian</gadget>
+				<gadget name="MPLoginDialog-EgyptianShield" type="gadget" sizerel1280="82 40 280 240" background="art/UserInterface/PreGame/EgyptianShield_ua" texturecoords="0 0 1.0 1.0" z="32"/>
+				<gadget name="MPLoginDialog-EgyptianCityName" type="formatText" sizerel1280="0 245 363 265" textcolor="40 40 40" textfont="MenuHeader Bold" textfontsize="18" textcenterhoriz="" z="32">CITY NAME HERE</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityLevel" type="formatText" sizerel1280="0 270 363 290" textcolor="40 40 40" textfont="MenuHeader Bold" textfontsize="16" textcenterhoriz="" z="32">LEVEL 1337</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityPlayButton" type="stateButton" sizerel1280="0 300 177 353" centerhoriz="" tooltiptext="$$57374$$Rule the Egyptians" textcenterhoriz="" z="32" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .695 .844" uisoundtheme="PregameButton">
+					$$18593$$Play
+					<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+				</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityDescription" type="formatText" sizerel1280="40 370 323 447" textcolor="40 40 40" textfont="PregameLabels" textfontsize="16" z="32">$$57366$$Take control of the lands of Egypt and control the wealth of the Nile.</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityDeleteButton" type="stateButton" sizerel1280="0 442 147 485" centerhoriz="" tooltiptext="$$57377$$Delete the Egyptians" textcolor="255 255 255" textfont="PregameButtons" textfontsize="14" textcenterhoriz="" textcentervert="" z="32" statebuttonuseinternalstates="" texturecoords="0 0 .578 .688" uisoundtheme="PregameBackButton">
+					$$18574$$Delete
+					<stateentry background="UserInterface\Core\ButtonWds128x24Normal_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Clicked_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Rollover_ua"/>
+					<stateentry background="UserInterface\Core\ButtonWds128x24Disabled_ua"/>
+				</gadget>
+			</gadget>
+			<gadget name="MPLoginDialog-EgyptianContainerInactive" type="gadget" sizerel1280="435 71 798 571" z="31" hidden="">
+				<gadget name="MPLoginDialog-EgyptianLabelInactive" type="formatText" sizerel1280="0 3 363 36" textfontsize="26" textcolor="87 81 67" textfont="MenuHeader Bold" textcenterhoriz="" z="32">$$57365$$Egyptian</gadget>
+				<gadget name="MPLoginDialog-EgyptianShieldInactive" type="gadget" sizerel1280="82 40 280 240" background="art/UserInterface/PreGame/EgyptianShieldGrey_ua" texturecoords="0 0 .777 .785" z="32"/>
+				<gadget name="MPLoginDialog-EgyptianCityNameInactive" type="formatText" sizerel1280="0 245 363 280" textcolor="87 81 67" textfont="MenuHeader Bold" textfontsize="18" textcenterhoriz="" z="32">$$57364$$CREATE NEW CITY</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityCreateButton" type="stateButton" sizerel1280="0 300 177 353" centerhoriz="" tooltiptext="$$57375$$Create new Egyptian city" textcenterhoriz="" z="32" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .695 .844" uisoundtheme="PregameButton">
+					$$37466$$Create
+					<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+					<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+				</gadget>
+				<gadget name="MPLoginDialog-EgyptianCityDescriptionInactive" type="formatText" sizerel1280="40 370 323 500" textcolor="87 81 67" textfont="PregameLabels" textfontsize="16" z="32">$$57366$$Take control of the lands of Egypt and control the wealth of the Nile.</gadget>
+			</gadget>
+			<gadget name="MPLoginDialog-EgyptianActive" type="gadget" sizerel1280="432 71 796 572" background="art/UserInterface/PreGame/EGCharSelectBGHighlight_ua" texturecoords="0 0 .711 .979" z="31" hidden=""/>
+		</gadget>
+		<gadget name="MPLoginDialog-RealmSelectBackground" centerhoriz="" type="gadget" sizerel1280="212 80 1068 808" background="art/UserInterface/PreGame/CharacterSelectBackground_ua" texturecoords="0 0 .837 .712" z="30" hidden="">
+			<gadget name="MPLoginDialog-RealmSelectLabel" type="formatText" sizerel1280="91 15 744 49" textfontsize="28" textfont="MenuHeader Bold" textcenterhoriz="" textcentervert="" textcolor="255 255 255" z="32">$$57367$$Choose your realm</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-RealmSelectContainer" centerhoriz="" type="gadget" sizerel1280="251 140 1008 700" z="32" background="art/UserInterface/PreGame/RealmListBackground_ua" texturecoords="0 0 .740 .548" hidden="">
+			<gadget name="MPLoginDialog-RealmSelectArea" type="gadget" sizerel1280="11 11 700 520"/>
+		</gadget>
+		<gadget name="MPLoginDialog-RealmContainer" centerhoriz="" type="gadget" sizerel1280="212 80 1068 808" z="31" hidden="" transparent="">
+			<gadget name="MPLoginDialog-RealmLabel" type="formatText" sizerel1280="490 585 792 605" textfont="MenuHeader Bold" textfontsize="20" textcenterhoriz="" textcolor="0 0 0" z="32">$$57372$$Realm List</gadget>
+			<gadget name="MPLoginDialog-RealmBar" type="gadget" sizerel1280="40 610 522 648" background="art/UserInterface/PreGame/RealmListBar_ua" texturecoords="0 0 .943 .609" z="32">
+				<gadget name="MPLoginDialog-RealmStar" type="gadget" sizerel1280="10 3 42 35" background="art/UserInterface/Map/RegionIcon_ua" texturecoords="0 0 1 1" z="32"/>
+				<gadget name="MPLoginDialog-RealmName" type="formatText" sizerel1280="42 5 450 35" textfont="MenuHeader Bold" textfontsize="18" textcentervert="" textcenterhoriz="" textcolor="0 0 0" z="32">REALM: REGION</gadget>
+			</gadget>
+			<gadget name="MPLoginDialog-RealmSelectButton" type="stateButton" sizerel1280="490 607 637 650" tooltiptext="$$57369$$Select a realm" textcenterhoriz="" z="33" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .578 .688" uisoundtheme="PregameButton">
+				$$42277$$Choose
+				<stateentry background="UserInterface\Core\ButtonWds128x24Normal_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24ClickedBlue_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24RolloverBlue_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24Disabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-RealmTransferButton" type="stateButton" sizerel1280="645 607 792 650" tooltiptext="$$57370$$Transfer to a new realm" textcenterhoriz="" z="33" statebuttonuseinternalstates="" textfont="PregameButtons" textfontsize="20" textcentervert="" textcolor="255 255 255" texturecoords="0 0 .578 .688" uisoundtheme="PregameButton">
+				$$57368$$Transfer
+				<stateentry background="UserInterface\Core\ButtonWds128x24Normal_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24ClickedBlue_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24RolloverBlue_ua"/>
+				<stateentry background="UserInterface\Core\ButtonWds128x24Disabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-CharacterCreateContainer" makerealanim="DialogOpenWithBlur" makeunrealanim="DialogCloseWithBlur" type="dialog" dontautoclose="" centerhoriz="" sizerel1280="0 350 511 661" background="art/UserInterface/Core/DialogBox_ua" z="40" hidden="" texturecoords="0 0 1 .609">
+			<gadget name="MPLoginDialog-CharacterCreateLabel" textcenterhoriz="" textcolor="0 0 0" textfontsize="24" textfont="MessageBoxPrompt" type="formatText" centerhoriz="" sizerel1280="21 40 490 120" z="31">$$57371$$Enter the name of your capital city</gadget>
+			<gadget name="MPLoginDialog-CharacterCreateNameBackground" type="gadget" centerhoriz="" sizerel1280="0 130 407 190" background="UserInterface/PreGame/CapCityNameBox_ua" texturecoords="0 0 .797 .953" z="32">
+				<gadget name="MPLoginDialog-CharacterCreateNameText" type="editBox" sizerel1280="10 10 397 50" textfont="PregameEntry" textfontsize="24" textcolor="255 255 255" enterkey="" editboxasciionly="" editboxmaxchars="15" backgroundcolor="75 75 75" backgroundalpha="0.0" z="32"/>
+			</gadget>
+			<gadget name="MPLoginDialog-CharacterCreateButton" type="stateButton" sizerel1280="10 247 187 300" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" uisoundtheme="PregameBackButton" z="32">
+				$$37466$$Create
+				<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+			<gadget name="MPLoginDialog-CharacterCreateBackButton" type="stateButton" sizerel1280="323 247 500 300" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .695 .844" uisoundtheme="PregameBackButton" z="32">
+				$$18458$$Back
+				<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-BackContainer" centerhoriz="" type="gadget" sizerel1280="212 80 1068 808" z="31" transparent="">
+			<gadget name="MPLoginDialog-BackButton" type="stateButton" sizerel1280="676 678 832 710" textcentervert="" textcenterhoriz="" textcolor="255 255 255" textfontsize="16" textfont="PregameButtonsSmall" statebuttonuseinternalstates="" texturecoords="0 0 .609 1" uisoundtheme="PregameBackButton" hidden="" z="39">
+				$$18458$$Back
+				<stateentry background="UserInterface\Core\Button156x32Normal_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32Clicked_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32Rollover_ua"/>
+				<stateentry background="UserInterface\Core\Button156x32Disabled_ua"/>
+			</gadget>
+		</gadget>
+		<gadget name="MPLoginDialog-ExitButton" tooltiptext="$$19891$$Exit game" type="stateButton" sizerel1280="1083 887 1260 940" rightedge="-20" statebuttonuseinternalstates="" textfont="PregameButtonsSmall" textfontsize="16" textcolor="255 255 255" textcenterhoriz="" textcentervert="" texturecoords="0 0 .695 .844" z="30" uisoundtheme="PregameBackButton">
+			$$19831$$Exit
+			<command>exit(true)</command>
+			<stateentry background="UserInterface\Core\Button156x32WdsNormal_ua"/>
+			<stateentry background="UserInterface\Core\Button156x32WdsClicked_ua"/>
+			<stateentry background="UserInterface\Core\Button156x32WdsRollover_ua"/>
+			<stateentry background="UserInterface\Core\Button156x32WdsDisabled_ua"/>
+		</gadget>
+	</gadget>
+</layout>
