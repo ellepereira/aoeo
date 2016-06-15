@@ -27,6 +27,4 @@ Click editor from the main menu. Make up your own playground and then click play
 ** DO NOT RUN AOEONLINE.EXE OR OR LAUNCHER.EXE ** there's nothing to update and my xlive.dll will allow you to start the game without the launcher.
 
 ## LICENSE
-if it breaks your computer I both:
-* Don't care.
-* You can't sue me because this is a warning that it may break your computer. Run at your own risk etc etc.
+"If it breaks your computer I don't care license". You can't sue me because this is a warning that it may break your computer. Run at your own risk etc etc.
