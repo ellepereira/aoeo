@@ -2,7 +2,7 @@
 
 Downloads AoEO's build 2044. Preconfigured with Editor access and xlive bypass.
 
-## Installation
+## Setup / Installation
 
 * Run AoEO2144.exe
 * It will download a file called "Launcher.exe" from MS server.
@@ -20,11 +20,11 @@ Downloads AoEO's build 2044. Preconfigured with Editor access and xlive bypass.
 * Once the download is finished then copy the contents of the `files` directory (in this zip) onto the `root` of your new Age of Empires Online directory (you know, where you just downloaded it to).
    * That means: xlive.dll should be on the same folder as Spartan.exe, game.cfg should be inside "startup" and the XML file inside of "data".
 
+## Playing
+* You should start the game with `Spartan.exe`.
+* Click editor from the main menu. Make up your own playground and then click playtest on the editor. Please share some of your creations and have fun.
 
-**Start the game.**
-Click editor from the main menu. Make up your own playground and then click playtest on the editor. Please share some of your creations and have fun.
-
-**DO NOT RUN AOEONLINE.EXE OR OR LAUNCHER.EXE** there's nothing to update and my xlive.dll will allow you to start the game without the launcher.
+**DO NOT RUN AOEONLINE.EXE OR OR LAUNCHER.EXE** there's nothing to update and my xlive.dll will allow you to start the game without the launcher. Running these may update you to the latest version of the game and you'll have to do the setup all over again.
 
 ## LICENSE
 "If it breaks your computer I don't care license". You can't sue me because this is a warning that it may break your computer. Run at your own risk etc etc.
