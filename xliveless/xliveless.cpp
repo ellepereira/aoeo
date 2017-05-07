@@ -454,10 +454,25 @@ int WINAPI XWSACleanup ()  	// XWSACleanup
 }
 
 // #3: XCreateSocket
-SOCKET WINAPI XCreateSocket (int af, int type, int protocol)
+SOCKET WINAPI XCreateSocket(int af, int type, int protocol)
 {
-    TRACE("XCreateSocket (%d, %d, %d)", af, type, protocol);
-    return socket(af, type, protocol);
+
+	TRACE("XCreateSocket (%d, %d, %d)", af, type, protocol);
+
+	if (protocol == 254) //VDP (Voice / Data Protocol) Unsupported 
+	{
+		protocol = 17; //UDP
+		TRACE("XCreateSocket - Protocol changed to UDP (VDP not supported)");
+	}
+
+	SOCKET sock = socket(af, type, protocol);
+
+	if (sock == INVALID_SOCKET)
+	{
+		TRACE("XCreateSocket - INVALID_SOCKET");
+	}
+
+	return sock;
 }
 
 // #4
