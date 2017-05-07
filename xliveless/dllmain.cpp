@@ -24,6 +24,8 @@ BOOL consoleEnabled = FALSE;
 UINT g_online = 1;
 UINT g_debug = 0;
 
+CHAR g_server[16 + 1]  = "127.0.0.1";
+
 UINT g_signin[4] = { 1,0,0,0 };
 CHAR g_szUserName[4][16+1] = { "xLiveLess", "xLiveLess", "xLiveLess", "xLiveLess" };
 XUID xFakeXuid[4] = { 0xEE000000DEADC0DE, 0xEE000000DEADC0DE, 0xEE000000DEADC0DE, 0xEE000000DEADC0DE };
@@ -230,6 +232,8 @@ void InitInstance()
 				CHECK_ARG( "online profile =", g_online );
 				CHECK_ARG_STR( "save directory =", g_profileDirectory );
 				CHECK_ARG( "debug log =", g_debug );
+				
+				CHECK_ARG_STR( "server ip =", g_server );
 			}
 
 			
