@@ -38,6 +38,7 @@ static NOTIFY_LISTEN g_listener[50];
 static int g_dwListener = 0;
 
 
+extern CHAR g_server[16+1];
 
 extern UINT g_signin[4];
 extern XUID xFakeXuid[4];
@@ -454,23 +455,9 @@ int WINAPI XWSACleanup ()  	// XWSACleanup
 
 // #3: XCreateSocket
 SOCKET WINAPI XCreateSocket (int af, int type, int protocol)
-{	
-	TRACE("XCreateSocket (%d, %d, %d)", af, type, protocol);
-
-	if (protocol == 254) //VDP (Voice / Data Protocol) Unsupported 
-	{
-		protocol = 17; //UDP
-		TRACE("XCreateSocket - Protocol changed to UDP (VDP not supported)");
-	}
-
-	SOCKET sock = socket(af, type, protocol);
-
-	if (sock == INVALID_SOCKET)
-	{
-		TRACE("XCreateSocket - INVALID_SOCKET");
-	}
-
-	return sock;
+{
+    TRACE("XCreateSocket (%d, %d, %d)", af, type, protocol);
+    return socket(af, type, protocol);
 }
 
 // #4
@@ -1048,12 +1035,12 @@ DWORD WINAPI XNetGetTitleXnAddr (DWORD * pAddr)
 			print++;
 		}
 
-	if(pAddr) *pAddr = 0x0100007F;	// 127.0.0.1
+	if(pAddr) *pAddr = inet_addr(g_server);
 
 	
 	if( print < 15 )
 	{
-		TRACE("- 127.0.0.1 - static" );
+		TRACE("- %s - static", g_server );
 	}
 
 			
@@ -2340,7 +2327,7 @@ int WINAPI XEnumerate(HANDLE hEnum, CHAR *pvBuffer, DWORD cbBuffer, PDWORD pcIte
 	if (hEnum == g_dwXtitleContent) {
 
 		XTITLESERVER_INFO server;
-		server.inaServer.S_un.S_addr = inet_addr("127.0.0.1");
+		server.inaServer.S_un.S_addr = inet_addr(g_server);
 		server.dwFlags = 0;
 		strcpy(server.szServerInfo, "en-us");
 
@@ -2524,8 +2511,9 @@ int WINAPI XEnumerate(HANDLE hEnum, CHAR *pvBuffer, DWORD cbBuffer, PDWORD pcIte
 		{
 			if( print < 100 )
 				TRACE("- NO_MORE_FILES");
-	
-			return ERROR_NO_MORE_FILES;
+
+			*pcItemsReturned = 0;
+			return ERROR_SUCCESS;
 		}
 	}
 
