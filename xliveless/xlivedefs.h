@@ -918,7 +918,21 @@ typedef enum
     XMARKETPLACE_OFFERING_TYPE_AVATARITEM = 0x00100000
 } XMARKETPLACE_OFFERING_TYPE;
  
+#define XUSER_NAME_SIZE 250
+#define MAX_RICHPRESENCE_SIZE 100
 
+typedef struct _XONLINE_FRIEND {
+	XUID xuid;
+	CHAR szGamertag[XUSER_NAME_SIZE];
+	DWORD dwFriendState;
+	XNKID sessionID;
+	DWORD dwTitleID;
+	FILETIME ftUserTime;
+	XNKID xnkidInvite;
+	FILETIME gameinviteTime;
+	DWORD cchRichPresence;
+	WCHAR wszRichPresence[MAX_RICHPRESENCE_SIZE];
+} XONLINE_FRIEND, *PXONLINE_FRIEND;
 
 // fixme
 class IXHV2ENGINE

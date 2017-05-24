@@ -14,6 +14,7 @@ HANDLE g_dwFakeContent = (HANDLE) -2;
 HANDLE g_dwFakeAchievementContent = (HANDLE) -2;
 HANDLE g_dwMarketplaceContent = (HANDLE) -2;
 HANDLE g_dwXtitleContent = (HANDLE)-2;
+HANDLE g_dwOnlineFriendsList = (HANDLE)-2;
 
 
 INT num_players;
@@ -2338,6 +2339,21 @@ int WINAPI XEnumerate(HANDLE hEnum, CHAR *pvBuffer, DWORD cbBuffer, PDWORD pcIte
 		return ERROR_INVALID_PARAMETER;
 	}
 
+	if (hEnum == g_dwOnlineFriendsList) {
+
+		_XONLINE_FRIEND fr;
+		strcpy(fr.szGamertag, "Luciano");
+		fr.xuid = 123;
+		fr.dwFriendState = 1;
+		memcpy(pvBuffer, &fr, sizeof(_XONLINE_FRIEND));
+
+		if (async == FALSE)
+			(*pcItemsReturned)++;
+
+		else
+			pOverlapped->InternalHigh++;
+	}
+
 	//XTitleServerCreateEnumerator (LPCSTR pszServerInfo, DWORD cItem, DWORD * pcbBuffer, PHANDLE phEnum)
 	if (hEnum == g_dwXtitleContent) {
 
@@ -3351,10 +3367,10 @@ DWORD WINAPI XFriendsCreateEnumerator (DWORD dwUserIndex, DWORD dwStartingIndex,
 {
     TRACE("XFriendsCreateEnumerator");
     
-		if(pcbBuffer) *pcbBuffer = dwFriendstoReturn * sizeof(XCONTENT_DATA);
+		if(pcbBuffer) *pcbBuffer = dwFriendstoReturn * sizeof(_XONLINE_FRIEND);
 		if(phEnum)
 		{
-			*phEnum = CreateMutex(NULL,NULL,NULL);
+			*phEnum = g_dwOnlineFriendsList = CreateMutex(NULL,NULL,NULL);
 
 			TRACE("- Handle = %X", *phEnum);
 		}
