@@ -1,16 +1,25 @@
 # MinHook
 
+[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+
 The Minimalistic x86/x64 API Hooking Library for Windows
 
 http://www.codeproject.com/KB/winsdk/LibMinHook.aspx
 
 ### Donation please
 
-Need some funds to continue developing this library. All contributions gratefully accepted.
+I need some funds to continue developing this library. All contributions gratefully accepted.
 
 <a href='https://pledgie.com/campaigns/27314'><img alt='Click here to lend your support to: MinHook - Help me continue to develop this library and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27314.png?skin_name=chrome' border='0' ></a>
 
 ### Version history
+
+- ####v1.3.3 - 8 Jan 2017
+  * Added a helper function ```MH_CreateHookApiEx```. (Thanks to asm256)
+  * Support Visual Studio 2017 RC.
+
+- ####v1.3.2.1 - 9 Nov 2015  (Nuget package only)
+  * Fixed an insufficient support for Visual Studio 2015.
 
 - ####v1.3.2 - 1 Nov 2015
   * Support Visual Studio 2015.
@@ -27,6 +36,9 @@ Need some funds to continue developing this library. All contributions gratefull
   * Fixed a possible thread deadlock in x64 mode. (Thanks to Aleh Kazakevich)
   * Reduced the footprint a little more.
   * Support Visual Studio 2015 RC. (Experimental)
+
+- ####v1.3.1.1 - 7 Apr 2015  (Nuget package only)
+  * Support for WDK8.0 and 8.1.
 
 - ####v1.3.1 - 19 Mar 2015
   * No major changes from v1.3.1-beta.
